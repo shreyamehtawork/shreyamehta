@@ -312,15 +312,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ---------- project demo links (placeholder — no external repos wired yet) ---------- */
-  document.querySelectorAll("[data-demo]").forEach((el) => {
-    el.addEventListener("click", (e) => {
-      e.preventDefault();
-      const name = el.dataset.demo === "papertrade" ? "PaperTrade" : "Cakeify";
-      alert(
-        `${name} demo link goes here — drop in your live URL or repo link.`,
-      );
-    });
-  });
+  // document.querySelectorAll("[data-demo]").forEach((el) => {
+  //   el.addEventListener("click", (e) => {
+  //     e.preventDefault();
+  //     const name = el.dataset.demo === "papertrade" ? "PaperTrade" : "Cakeify";
+  //     alert(
+  //       `${name} demo link goes here — drop in your live URL or repo link.`,
+  //     );
+  //   });
+  // });
 
   /* ---------- resume button (placeholder) ---------- */
   const resumeBtn = document.getElementById("resumeBtn");
