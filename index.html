@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shreya Mehta</title>
+    <meta
+      name="description"
+      content="Shreya Mehta — software developer building the API layer between products and the providers they depend on. Insurance, e-commerce, dashboards."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var theme = saved === "light" ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="noise"></div>
+    <div class="aurora" aria-hidden="true">
+      <span class="aurora-blob b1"></span>
+      <span class="aurora-blob b2"></span>
+      <span class="aurora-blob b3"></span>
+    </div>
+    <div class="spotlight" id="spotlight" aria-hidden="true"></div>
+
+    <!-- ===== NAV ===== -->
+    <nav class="nav" id="nav">
+      <a href="#top" class="nav-brand">
+        <span class="brand-glyph">SM</span>
+        <span class="brand-word">Shreya Mehta</span>
+      </a>
+
+      <div class="nav-pill" id="navPill">
+        <a href="#about" data-idx="about">About</a>
+        <a href="#stack" data-idx="stack">Stack</a>
+        <a href="#log" data-idx="log">Work Experience</a>
+        <a href="#work" data-idx="work">Projects</a>
+        <a href="#certs" data-idx="certs">Certs</a>
+        <a href="#contact" data-idx="contact">Contact</a>
+      </div>
+
+      <div class="nav-right">
+        <span class="nav-status"><i></i>Open to build</span>
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          type="button"
+          aria-label="Toggle light and dark theme"
+        >
+          <svg
+            class="theme-icon theme-icon-sun"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4"></circle>
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+            ></path>
+          </svg>
+          <svg
+            class="theme-icon theme-icon-moon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="nav-drawer" id="navDrawer">
+      <a href="#about" data-idx="about">01 — About</a>
+      <a href="#stack" data-idx="stack">02 — Stack</a>
+      <a href="#log" data-idx="log">03 — Work Experience</a>
+      <a href="#work" data-idx="work">04 — Projects</a>
+      <a href="#certs" data-idx="certs">05 — Certs</a>
+      <a href="#contact" data-idx="contact">06 — Contact</a>
+    </div>
+
+    <!-- ===== DOT NAV — vertical scroll-spy rail ===== -->
+    <nav class="dot-nav" id="dotNav" aria-label="Section navigation">
+      <span class="dot-nav-line" aria-hidden="true"></span>
+      <a href="#top" class="dot-nav-btn" data-idx="top" aria-label="Home">
+        <span class="dot-nav-ring" aria-hidden="true"></span>
+        <span class="dot-nav-core"></span>
+        <span class="dot-nav-tip">Home</span>
+      </a>
+      <a href="#about" class="dot-nav-btn" data-idx="about" aria-label="About">
+        <span class="dot-nav-ring" aria-hidden="true"></span>
+        <span class="dot-nav-core"></span>
+        <span class="dot-nav-tip">About</span>
+      </a>
+      <a href="#stack" class="dot-nav-btn" data-idx="stack" aria-label="Stack">
+        <span class="dot-nav-ring" aria-hidden="true"></span>
+        <span class="dot-nav-core"></span>
+        <span class="dot-nav-tip">Stack</span>
+      </a>
+      <a href="#log" class="dot-nav-btn" data-idx="log" aria-label="Log">
+        <span class="dot-nav-ring" aria-hidden="true"></span>
+        <span class="dot-nav-core"></span>
+        <span class="dot-nav-tip">Log</span>
+      </a>
+      <a href="#work" class="dot-nav-btn" data-idx="work" aria-label="Work">
+        <span class="dot-nav-ring" aria-hidden="true"></span>
+        <span class="dot-nav-core"></span>
+        <span class="dot-nav-tip">Projects</span>
+      </a>
+      <a
+        href="#certs"
+        class="dot-nav-btn"
+        data-idx="certs"
+        aria-label="Certifications"
+      >
+        <span class="dot-nav-ring" aria-hidden="true"></span>
+        <span class="dot-nav-core"></span>
+        <span class="dot-nav-tip">Certs</span>
+      </a>
+      <a
+        href="#contact"
+        class="dot-nav-btn"
+        data-idx="contact"
+        aria-label="Contact"
+      >
+        <span class="dot-nav-ring" aria-hidden="true"></span>
+        <span class="dot-nav-core"></span>
+        <span class="dot-nav-tip">Contact</span>
+      </a>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header class="hero" id="top">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-shell">
+        <div class="hero-copy">
+          <p class="hero-kicker">
+            <span class="kicker-dot"></span>Pune, Maharashtra , India
+          </p>
+          <p class="hero-role-line">
+            <span class="hero-role-name">Shreya Mehta</span>
+            <span class="hero-role-sep">/</span>
+            <span class="hero-role-text" id="roleText">Software Developer</span
+            ><span class="hero-role-cursor">|</span>
+          </p>
+          <h1 class="hero-h1">
+            I make two systems<span class="hero-h1-glow"> talk</span>
+            to each other.
+          </h1>
+          <p class="hero-desc">
+            Software developer wiring products to the providers they run on —
+            insurers, payment rails, calculators. Three years self‑taught, two
+            internships, six shipped builds.
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-glow"
+              >See the builds <span>↗</span></a
+            >
+            <a
+              href="assets/resume-shreya-mehta.pdf"
+              class="btn btn-outline"
+              id="resumeBtn"
+              download="Shreya-Mehta-Resume.pdf"
+              >Download résumé</a
+            >
+            <a href="#contact" class="btn btn-text"
+              >Get in touch <span>↗</span></a
+            >
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-num" data-count="6">0</span
+              ><span class="stat-label">Shipped builds</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="35" data-suffix="%">0</span
+              ><span class="stat-label">Fewer pet‑service bugs</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="7" data-suffix="+">0</span
+              ><span class="stat-label">Client projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num" data-count="3" data-suffix="+">0</span
+              ><span class="stat-label">Years learning & building</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SIGNATURE ELEMENT: interactive company / role console -->
+
+        <div class="console" aria-label="Interactive career record">
+          <div class="console-tabs" id="consoleTabs">
+            <button class="ctab is-active" data-provider="nexora">
+              The Nexora Group
+            </button>
+            <button class="ctab" data-provider="tommyandfurry">
+              TommyandFurry
+            </button>
+            <button class="ctab" data-provider="rd">The R.D. Group</button>
+          </div>
+          <div class="console-req">
+            <span class="creq-method" id="consoleMethod">ACTIVE</span>
+            <span class="creq-path" id="consolePath"
+              >/career/the-nexora-group</span
+            >
+          </div>
+          <pre class="console-body" id="consoleBody"></pre>
+          <div class="console-foot">
+            <span class="cfoot-dot" id="consoleDot"></span>
+            <span id="consoleStatus">200 · record loaded</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>React</span><span>·</span><span>Node.js</span><span>·</span
+        ><span>Laravel</span><span>·</span><span>REST APIs</span><span>·</span
+        ><span>MongoDB</span><span>·</span><span>PostgreSQL</span><span>·</span
+        ><span>TypeScript</span><span>·</span><span>UAT</span><span>·</span
+        ><span>React</span><span>·</span><span>Node.js</span><span>·</span
+        ><span>Laravel</span><span>·</span><span>REST APIs</span><span>·</span
+        ><span>MongoDB</span><span>·</span><span>PostgreSQL</span><span>·</span
+        ><span>TypeScript</span><span>·</span><span>UAT</span><span>·</span>
+      </div>
+    </div>
+
+    <main>
+      <!-- ===== ABOUT — bento ===== -->
+      <section class="section about" id="about">
+        <div class="section-head">
+          <span class="eyebrow">01 / About</span>
+          <h2>Shreya - The ultimate glue between the two systems</h2>
+        </div>
+
+        <div class="bento">
+          <div class="bento-cell bento-lead reveal">
+            <p class="lead-line">
+              Most of my work lives in the seam between a product and the
+              outside services it depends on — insurers, gateways, calculators.
+              That seam is where things quietly break, so I've spent three years
+              making it boring instead: predictable, tested, documented.
+            </p>
+            <p>
+              I started self‑taught — HTML, CSS, JavaScript, then React — and
+              learned the rest on the job. At Novacred Insurance I picked up
+              Laravel from a standing start to ship a full Pet Insurance product
+              across three underwriters, and ran UAT on a Vehicle Insurance
+              product across four more. At The R.D. Group I moved fast across
+              seven client projects, owning design, build, and testing end to
+              end.
+            </p>
+          </div>
+
+          <div class="bento-cell bento-quote reveal">
+            <p>
+              “The fastest way to understand a pattern is to implement it
+              yourself.”
+            </p>
+            <span>— why PaperTrade &amp; Cakeify exist</span>
+          </div>
+
+          <!-- <div class="bento-cell bento-fact reveal">
+            <span class="ac-label">Based In</span>
+            <span class="ac-value">Pune , Ma, India</span>
+          </div> -->
+          <div class="bento-cell bento-fact reveal">
+            <span class="ac-label">Tech Stack</span>
+            <span class="ac-value">React · Node · · MERN </span>
+          </div>
+          <div class="bento-cell bento-fact reveal">
+            <span class="ac-label">Domain</span>
+            <span class="ac-value">InsurTech · E‑commerce · Dashboards</span>
+          </div>
+          <div class="bento-cell bento-fact reveal">
+            <span class="ac-label">Education</span>
+            <span class="ac-value">BBA‑CA, SPPU (2026)</span>
+          </div>
+
+          <div class="bento-cell bento-progress reveal">
+            <span class="ac-label">Learning in progress</span>
+            <ul>
+              <li>
+                <span>AWS Developer Associate — DVA‑C02</span
+                ><i class="bar"><b style="width: 55%"></b></i>
+              </li>
+              <li>
+                <span>AI Engineering — LLM, RAG, QLoRA, Agents</span
+                ><i class="bar"><b style="width: 40%"></b></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== STACK ===== -->
+      <section class="section stack" id="stack">
+        <div class="section-head">
+          <span class="eyebrow">02 / Stack</span>
+          <h2>Tools I reach for</h2>
+          <p class="section-sub">
+            Not a wall of badges — this is what actually shipped the projects
+            below.
+          </p>
+        </div>
+
+        <div class="stack-grid">
+          <div class="stack-col">
+            <h3 class="stack-col-title">Frontend</h3>
+            <ul class="stack-list">
+              <li>
+                <span>React</span><span class="tag tag-violet">Core</span>
+              </li>
+              <li><span>Next.js</span></li>
+              <li><span>Redux</span></li>
+              <li><span>TypeScript</span></li>
+              <li><span>Tailwind CSS / Bootstrap</span></li>
+            </ul>
+          </div>
+
+          <div class="stack-col">
+            <h3 class="stack-col-title">Backend</h3>
+            <ul class="stack-list">
+              <li>
+                <span>Node.js</span><span class="tag tag-violet">Core</span>
+              </li>
+              <li><span>PHP (Laravel)</span></li>
+              <li>
+                <span>RESTful APIs</span
+                ><span class="tag tag-violet">Core</span>
+              </li>
+              <li><span>Java</span></li>
+              <li>
+                <span>Python</span><span class="tag tag-violet">Core</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="stack-col">
+            <h3 class="stack-col-title">Database</h3>
+            <ul class="stack-list">
+              <li><span>MongoDB</span></li>
+              <li><span>PostgreSQL</span></li>
+              <li><span>MySQL</span></li>
+              <li><span>SQLite</span></li>
+            </ul>
+          </div>
+
+          <div class="stack-col">
+            <h3 class="stack-col-title">Workflow</h3>
+            <ul class="stack-list">
+              <li><span>Git / GitHub</span></li>
+              <li><span>Vercel</span></li>
+              <li><span>Postman</span></li>
+              <li><span>Figma / Canva</span></li>
+              <li>
+                <span>UAT &amp; Functional Testing</span
+                ><span class="tag tag-amber">Daily driver</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="stack-col">
+            <h3 class="stack-col-title">AI‑assisted dev</h3>
+            <ul class="stack-list">
+              <li><span>Claude</span></li>
+              <li><span>GitHub Copilot</span></li>
+              <li><span>ChatGPT (Codex)</span></li>
+              <li><span>Kiro</span></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== WORK LOG ===== -->
+      <section class="section log" id="log">
+        <div class="section-head">
+          <span class="eyebrow">03 / Work Experience</span>
+          <h2>Where I've worked</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="tl-entry is-active reveal">
+            <div class="tl-rail"><span class="tl-node"></span></div>
+            <div class="tl-card">
+              <div class="tl-top">
+                <span class="tl-status"><i></i>Active</span>
+                <span class="tl-dates">Jul 2026 — Present</span>
+              </div>
+              <h3>Software Developer</h3>
+              <p class="tl-company">
+                The Nexora Group <em>— Software startup</em>
+              </p>
+              <ul>
+                <li>
+                  Building scalable , responsive websites , web apps and mobile
+                  applications .
+                </li>
+                <li>Client Based Project</li>
+                <!-- <li>Client Based Project</li> -->
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-entry reveal">
+            <div class="tl-rail"><span class="tl-node"></span></div>
+            <div class="tl-card">
+              <div class="tl-top">
+                <span class="tl-status is-closed"><i></i>Closed</span>
+                <span class="tl-dates">Dec 2025 — Jul 2026</span>
+              </div>
+              <h3>Software Developer Intern</h3>
+              <p class="tl-company">
+                Novacred Insurance Pvt Ltd <em>— InsurTech, TommyandFurry</em>
+              </p>
+              <ul>
+                <li>
+                  Picked up Laravel PHP from a standing start to take on backend
+                  ownership.
+                </li>
+                <li>
+                  Stabilized Pet Service functionality, cutting related bugs by
+                  <strong>35%</strong> through end‑to‑end testing.
+                </li>
+                <li>
+                  Built the full Pet Insurance product against three underwriter
+                  APIs — Bajaj, GoDigit, Generali Centrali.
+                </li>
+                <li>
+                  Ran onboarding and UAT for the Vehicle Insurance product
+                  across Hizuno, GoDigit, and Bajaj.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="tl-entry reveal">
+            <div class="tl-rail"><span class="tl-node"></span></div>
+            <div class="tl-card">
+              <div class="tl-top">
+                <span class="tl-status is-closed"><i></i>Closed</span>
+                <span class="tl-dates">Jul 2025 — Oct 2025</span>
+              </div>
+              <h3>MERN Stack Developer Intern</h3>
+              <p class="tl-company">The R.D. Group of Industries</p>
+              <ul>
+                <li>
+                  Introduced Next.js and TypeScript into the team's frontend,
+                  cutting load times.
+                </li>
+                <li>
+                  Reduced bug turnaround time by <strong>30%</strong> through
+                  self‑managed end‑to‑end testing.
+                </li>
+                <li>
+                  Delivered <strong>7+ client projects</strong> independently —
+                  design, build, and test.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS — bento grid ===== -->
+      <section class="section work" id="work">
+        <div class="section-head">
+          <span class="eyebrow">04 / Projects</span>
+          <h2>Things I've shipped</h2>
+          <p class="section-sub">
+            Client work and self‑directed builds, side by side.
+          </p>
+        </div>
+
+        <div class="work-grid">
+          <article class="wcard wcard-lg tilt" data-motif="pet">
+            <div class="wcard-glow"></div>
+            <div class="wcard-top">
+              <span class="tag tag-amber">Client work</span>
+              <span class="wcard-id">01</span>
+            </div>
+            <h3>Pet Insurance Product</h3>
+            <p class="wcard-client">Novacred Insurance Pvt Ltd</p>
+            <p class="wcard-desc">
+              Calculators and underwriter integrations built across three
+              insurance partners, from quote to bind.
+            </p>
+            <div class="wcard-stack">
+              <span>PHP</span><span>Third‑party APIs</span><span>MySQL</span>
+            </div>
+            <!-- <button class="wcard-cta" disabled>Code private 🔒</button> -->
+          </article>
+
+          <article class="wcard tilt" data-motif="vehicle">
+            <div class="wcard-glow"></div>
+            <div class="wcard-top">
+              <span class="tag tag-amber">Client work</span>
+              <span class="wcard-id">02</span>
+            </div>
+            <h3>Vehicle Insurance — API Integration</h3>
+            <p class="wcard-client">Novacred Insurance Pvt Ltd</p>
+            <p class="wcard-desc">
+              Integrated third‑party vehicle insurance providers and ran full
+              UAT before go‑live.
+            </p>
+            <div class="wcard-stack">
+              <span>Laravel</span><span>REST APIs</span><span>UAT</span>
+            </div>
+            <a href="#" class="wcard-cta wcard-cta-live" data-demo="papertrade"
+              >View project <span>↗</span></a
+            >
+            <!-- <button class="wcard-cta" disabled>Code private 🔒</button> -->
+          </article>
+
+          <article class="wcard tilt" data-motif="ecommerce">
+            <div class="wcard-glow"></div>
+            <div class="wcard-top">
+              <span class="tag tag-amber">Client work</span>
+              <span class="wcard-id">03</span>
+            </div>
+            <h3>Chloe's Venture</h3>
+            <p class="wcard-client">The R.D. Group of Industries</p>
+            <p class="wcard-desc">
+              E‑commerce shopping application built and shipped independently,
+              end to end.
+            </p>
+            <div class="wcard-stack">
+              <span>Next.js</span><span>TypeScript</span><span>Node.js</span>
+            </div>
+            <a href="#" class="wcard-cta wcard-cta-live" data-demo="papertrade"
+              >View project <span>↗</span></a
+            >
+            <!-- <button class="wcard-cta" disabled>Code private 🔒</button> -->
+          </article>
+
+          <article class="wcard tilt" data-motif="dashboard">
+            <div class="wcard-glow"></div>
+            <div class="wcard-top">
+              <span class="tag tag-amber">Client work</span>
+              <span class="wcard-id">04</span>
+            </div>
+            <h3>Firstur Perfumes</h3>
+            <p class="wcard-client">The R.D. Group of Industries</p>
+            <p class="wcard-desc">
+              Desktop‑first admin dashboard for catalogue and order oversight.
+            </p>
+            <div class="wcard-stack">
+              <span>React</span><span>Redux</span><span>REST APIs</span>
+            </div>
+            <a href="#" class="wcard-cta wcard-cta-live" data-demo="papertrade"
+              >View project <span>↗</span></a
+            >
+            <!-- <button class="wcard-cta" disabled>Code private 🔒</button> -->
+          </article>
+
+          <article
+            class="wcard wcard-lg tilt is-live"
+            data-motif="trading"
+            data-demo="papertrade"
+          >
+            <div class="wcard-glow"></div>
+            <div class="wcard-top">
+              <span class="tag tag-violet">Self‑directed</span>
+              <span class="wcard-id">05</span>
+            </div>
+            <h3>PaperTrade</h3>
+            <p class="wcard-client">Independent build</p>
+            <p class="wcard-desc">
+              Virtual trading system simulating order books, P&amp;L, and live
+              position tracking.
+            </p>
+            <div class="wcard-stack">
+              <span>React</span><span>Node.js</span><span>MongoDB</span>
+            </div>
+            <a href="#" class="wcard-cta wcard-cta-live" data-demo="papertrade"
+              >View project <span>↗</span></a
+            >
+          </article>
+
+          <article
+            class="wcard tilt is-live"
+            data-motif="orders"
+            data-demo="cakeify"
+          >
+            <div class="wcard-glow"></div>
+            <div class="wcard-top">
+              <span class="tag tag-violet">Self‑directed</span>
+              <span class="wcard-id">06</span>
+            </div>
+            <h3>Cakeify</h3>
+            <p class="wcard-client">Independent build</p>
+            <p class="wcard-desc">
+              Multi‑role order management for customers, bakers, and admins.
+            </p>
+            <div class="wcard-stack">
+              <span>React</span><span>Express</span><span>PostgreSQL</span>
+            </div>
+            <a href="#" class="wcard-cta wcard-cta-live" data-demo="cakeify"
+              >View project <span>↗</span></a
+            >
+          </article>
+        </div>
+      </section>
+
+      <!-- ===== CERTS ===== -->
+      <section class="section certs" id="certs">
+        <div class="section-head">
+          <span class="eyebrow">05 / Credentials</span>
+          <h2>Trainings & Certifications</h2>
+        </div>
+        <div class="certs-grid">
+          <div class="cert-row">
+            <span class="dot dot-done"></span
+            ><span class="cert-name">FullStack Development</span
+            ><span class="cert-state">Complete</span>
+          </div>
+          <div class="cert-row">
+            <span class="dot dot-done"></span
+            ><span class="cert-name">React Redux MERN Stack Development</span
+            ><span class="cert-state">Complete</span>
+          </div>
+          <div class="cert-row">
+            <span class="dot dot-progress"></span
+            ><span class="cert-name">AWS Developer Associate — DVA‑C02</span
+            ><span class="cert-state"> In progress</span>
+          </div>
+          <div class="cert-row">
+            <span class="dot dot-progress"></span
+            ><span class="cert-name"
+              >AI Engineering — LLM, RAG, QLoRA, Agents</span
+            ><span class="cert-state">In progress</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section class="section contact" id="contact">
+        <div class="contact-shell">
+          <div class="contact-copy">
+            <span class="eyebrow">06 / Contact</span>
+            <h2>Let's connect.</h2>
+            <p>Open to grow , build , learn , unlearn and relearn .</p>
+
+            <div class="contact-links">
+              <a
+                href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=mehtashreya1506@gmail.com"
+                ><span>Email</span><b>mehtashreya1506@gmail.com</b></a
+              >
+              <a href="tel:+918805671505"
+                ><span>Phone</span><b>+91 88056 71505</b></a
+              >
+              <a
+                href="https://www.linkedin.com/in/shreyamehta150506"
+                target="_blank"
+                rel="noopener"
+                ><span>LinkedIn</span><b>in/shreyamehta150506</b></a
+              >
+              <span class="contact-link-static"
+                ><span>Location</span><b>Pune, Maharashtra, India</b></span
+              >
+            </div>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <label for="cf-name">Name</label>
+              <input
+                type="text"
+                id="cf-name"
+                name="name"
+                placeholder="Your name"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <label for="cf-email">Email</label>
+              <input
+                type="email"
+                id="cf-email"
+                name="email"
+                placeholder="you@company.com"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <label for="cf-subject">Subject</label>
+              <input
+                type="text"
+                id="cf-subject"
+                name="subject"
+                placeholder="What's this about?"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <label for="cf-message">Message</label>
+              <textarea
+                id="cf-message"
+                name="message"
+                rows="4"
+                placeholder="Tell me about the role or project…"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" id="submitBtn" class="btn btn-glow btn-block">
+              Send message <span>↗</span>
+            </button>
+            <p class="form-note" id="formNote"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="brand-glyph">SM</span>
+      <p>© 2026 Shreya Mehta.</p>
+      <div class="footer-links">
+        <a href="mailto:mehtashreya1506@gmail.com">Email</a>
+        <a
+          href="https://www.linkedin.com/in/shreyamehta150506/"
+          target="_blank"
+          rel="noopener"
+          >LinkedIn</a
+        >
+      </div>
+    </footer>
+
+    <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+    <a
+      class="whatsapp-fab"
+      href="https://wa.me/918805671505"
+      target="_blank"
+      rel="noopener"
+      aria-label="Chat on WhatsApp"
+    >
+      <span class="wa-ring"></span>
+      <svg
+        viewBox="0 0 32 32"
+        fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M16.04 2.667C8.65 2.667 2.667 8.65 2.667 16.04c0 2.704.787 5.222 2.144 7.337L3.333 29.333l6.137-1.444a13.31 13.31 0 0 0 6.57 1.73c7.39 0 13.373-5.983 13.373-13.373S23.43 2.667 16.04 2.667zm0 24.28a11.06 11.06 0 0 1-5.83-1.652l-.418-.252-3.633.855.87-3.546-.273-.43a11.07 11.07 0 0 1-1.733-5.882c0-6.134 4.99-11.124 11.124-11.124 6.135 0 11.125 4.99 11.125 11.124 0 6.135-4.99 11.124-11.125 11.124zm6.103-8.31c-.334-.167-1.978-.976-2.285-1.088-.306-.112-.529-.167-.752.167-.222.334-.862 1.088-1.056 1.31-.195.223-.39.25-.724.084-.334-.167-1.41-.52-2.687-1.66-.993-.885-1.663-1.978-1.857-2.312-.195-.334-.02-.515.167-.696.167-.167.391-.43.585-.65.195-.222.26-.38.39-.638.13-.255.065-.473-.038-.65-.103-.167-.806-1.946-1.107-2.668-.295-.71-.594-.612-.817-.622-.21-.01-.452-.012-.694-.012-.243 0-.636.09-.864.34-.228.25-.873.852-.873 2.077s.894 2.41 1.018 2.577c.124.167 1.71 2.604 4.143 3.55 2.434.947 2.434.631 3.122.591.689-.04 2.225-.91 2.538-1.79.313-.879.313-1.633.218-1.79-.094-.157-.342-.25-.676-.418z"
+        />
+      </svg>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
