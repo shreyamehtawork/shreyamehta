@@ -848,19 +848,21 @@ main,
   }
 }
 
-/* ---------- marquee ---------- */
 .marquee {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   overflow: hidden;
   padding: 18px 0;
   background: var(--glass);
+  display: flex; /* the two tracks sit side by side, back to back */
 }
 .marquee-track {
   display: flex;
   gap: 18px;
+  padding-right: 18px; /* keeps spacing consistent between the two copies */
   width: max-content;
-  animation: scroll 26s linear infinite;
+  flex-shrink: 0;
+  animation: scroll 10s linear infinite;
 }
 .marquee-track span {
   font-family: var(--f-mono);
@@ -870,6 +872,15 @@ main,
 }
 .marquee-track span:nth-child(odd) {
   color: var(--muted);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
 @keyframes scroll {
   from {

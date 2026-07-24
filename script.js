@@ -280,7 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
         requestAnimationFrame(step);
       } else {
         consoleBody.innerHTML = full;
-        consoleStatus.textContent = "200 · record loaded";
+        consoleStatus.textContent = "200 OK";
       }
     }
     requestAnimationFrame(step);
