@@ -1703,6 +1703,38 @@ main,
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 640px) {
+  .contact-shell {
+    gap: 24px;
+  }
+  .contact-form {
+    gap: 10px;
+    padding: 16px;
+    border-radius: var(--r-md);
+  }
+  .form-row {
+    gap: 4px;
+  }
+  .form-row label {
+    font-size: 9.5px;
+  }
+  .form-row input,
+  .form-row textarea {
+    padding: 9px 12px;
+    font-size: 16px; /* 16px stops iOS zooming into the field */
+    border-radius: 8px;
+  }
+  .form-row textarea {
+    height: 76px;
+  }
+  .contact-form .btn-block {
+    padding: 11px 16px;
+    margin-top: 4px;
+  }
+  .form-note:empty {
+    display: none;
+  }
+}
 
 /* ---------- footer ---------- */
 .footer {
@@ -1900,12 +1932,20 @@ main,
   }
 }
 
-@media (max-width: 380px) {
+/* phones: always show the name; "Open to build" collapses to its dot */
+@media (max-width: 640px) {
   .brand-word {
-    display: none;
+    overflow: visible;
+    text-overflow: clip;
   }
-  .nav-brand {
+  .nav-status {
+    font-size: 0;
     gap: 0;
+  }
+}
+@media (max-width: 340px) {
+  .brand-word {
+    font-size: 11px;
   }
 }
 
