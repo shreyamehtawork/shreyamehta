@@ -44,8 +44,8 @@
       <div class="nav-pill" id="navPill">
         <a href="#about" data-idx="about">About</a>
         <a href="#stack" data-idx="stack">Stack</a>
-        <a href="#log" data-idx="log">Work Experience</a>
         <a href="#work" data-idx="work">Projects</a>
+        <a href="#log" data-idx="log">Work Experience</a>
         <a href="#certs" data-idx="certs">Certs</a>
         <a href="#contact" data-idx="contact">Contact</a>
       </div>
@@ -100,8 +100,8 @@
     <div class="nav-drawer" id="navDrawer">
       <a href="#about" data-idx="about">01 — About</a>
       <a href="#stack" data-idx="stack">02 — Stack</a>
-      <a href="#log" data-idx="log">03 — Work Experience</a>
-      <a href="#work" data-idx="work">04 — Projects</a>
+      <a href="#work" data-idx="work">03 — Projects</a>
+      <a href="#log" data-idx="log">04 — Work Experience</a>
       <a href="#certs" data-idx="certs">05 — Certs</a>
       <a href="#contact" data-idx="contact">06 — Contact</a>
     </div>
@@ -124,15 +124,15 @@
         <span class="dot-nav-core"></span>
         <span class="dot-nav-tip">Stack</span>
       </a>
-      <a href="#log" class="dot-nav-btn" data-idx="log" aria-label="Log">
-        <span class="dot-nav-ring" aria-hidden="true"></span>
-        <span class="dot-nav-core"></span>
-        <span class="dot-nav-tip">Work Exp</span>
-      </a>
       <a href="#work" class="dot-nav-btn" data-idx="work" aria-label="Work">
         <span class="dot-nav-ring" aria-hidden="true"></span>
         <span class="dot-nav-core"></span>
         <span class="dot-nav-tip">Projects</span>
+      </a>
+      <a href="#log" class="dot-nav-btn" data-idx="log" aria-label="Log">
+        <span class="dot-nav-ring" aria-hidden="true"></span>
+        <span class="dot-nav-core"></span>
+        <span class="dot-nav-tip">Work Exp</span>
       </a>
       <a
         href="#certs"
@@ -191,6 +191,22 @@
             <a href="#contact" class="btn btn-text"
               >Get in touch <span>↗</span></a
             >
+            <!-- <a
+              href="https://github.com/shreyamehtawork"
+              class="btn btn-text"
+              target="_blank"
+              rel="noopener"
+              ><svg
+                class="btn-icon"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.7 5.4-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"
+                /></svg
+              >GitHub <span>↗</span></a
+            > -->
           </div>
 
           <div class="hero-stats">
@@ -289,6 +305,9 @@
               seven client projects, owning design, build, and testing end to
               end.
             </p>
+            <button class="lead-more" id="leadMore" type="button" aria-expanded="false">
+              Read more ↓
+            </button>
           </div>
 
           <div class="bento-cell bento-quote reveal">
@@ -338,88 +357,357 @@
           <span class="eyebrow">02 / Stack</span>
           <h2>Tools I reach for</h2>
           <p class="section-sub">
-            Not a wall of badges — this is what actually shipped the projects
-            below.
+            What I build, ship and test with. Highlighted ones are daily
+            drivers.
           </p>
         </div>
 
-        <div class="stack-grid">
-          <div class="stack-col">
-            <h3 class="stack-col-title">Frontend</h3>
-            <ul class="stack-list">
-              <li>
-                <span>React</span><span class="tag tag-violet">Core</span>
-              </li>
-              <li><span>Next.js</span></li>
-              <li><span>Redux</span></li>
-              <li><span>TypeScript</span></li>
-              <li><span>Tailwind CSS / Bootstrap</span></li>
+        <div class="stack-panel">
+          <div class="stack-row">
+            <h3 class="stack-row-title">Languages</h3>
+            <ul class="stack-chips">
+              <li class="is-core">JavaScript</li>
+              <li class="is-core">TypeScript</li>
+              <li>Python</li>
+              <li>PHP</li>
+              <li>HTML5</li>
             </ul>
           </div>
+          <div class="stack-row">
+            <h3 class="stack-row-title">Frontend &amp; UI</h3>
+            <ul class="stack-chips">
+              <li class="is-core">React.js</li>
+              <li class="is-core">Next.js</li>
+              <li>Redux</li>
+              <li>Tailwind CSS</li>
+              <li>Bootstrap</li>
+              <li>CSS3</li>
+              <li>jQuery</li>
+              <li>Responsive Design</li>
+            </ul>
+          </div>
+          <div class="stack-row">
+            <h3 class="stack-row-title">Backend &amp; APIs</h3>
+            <ul class="stack-chips">
+              <li class="is-core">Node.js</li>
+              <li class="is-core">Express.js</li>
+              <li>Laravel (PHP)</li>
+              <li class="is-core">REST APIs</li>
+              <li>Webhooks</li>
+              <li>Web Scraping</li>
+              <li>MVC</li>
+            </ul>
+          </div>
+          <div class="stack-row">
+            <h3 class="stack-row-title">Databases</h3>
+            <ul class="stack-chips">
+              <li class="is-core">MongoDB</li>
+              <li class="is-core">MySQL</li>
+              <li>PostgreSQL</li>
+              <li>SQLite</li>
+              <li>ChromaDB</li>
+              <li>Schema Design</li>
+            </ul>
+          </div>
+          <div class="stack-row">
+            <h3 class="stack-row-title">AI &amp; LLMs</h3>
+            <ul class="stack-chips">
+              <li class="is-core">RAG</li>
+              <li>LLMs</li>
+              <li>Gemini API</li>
+              <li>GPT API</li>
+              <li>Claude Code</li>
+              <li>Cursor</li>
+              <li>GitHub Copilot</li>
+              <li>ChatGPT (Codex)</li>
+            </ul>
+          </div>
+          <div class="stack-row">
+            <h3 class="stack-row-title">Cloud &amp; DevOps</h3>
+            <ul class="stack-chips">
+              <li>AWS EC2</li>
+              <li>IAM</li>
+              <li>ELB</li>
+              <li>ASG</li>
+              <li>RDS</li>
+            </ul>
+          </div>
+          <div class="stack-row">
+            <h3 class="stack-row-title">Testing &amp; Quality</h3>
+            <ul class="stack-chips">
+              <li class="is-core">UAT Coordination</li>
+              <li>Functional</li>
+              <li>Integration</li>
+              <li>Manual Testing</li>
+              <li>Debugging</li>
+              <li>System Validation</li>
+            </ul>
+          </div>
+          <div class="stack-row">
+            <h3 class="stack-row-title">CS Fundamentals</h3>
+            <ul class="stack-chips">
+              <li>Data Structures</li>
+              <li>Sorting &amp; Searching</li>
+              <li>OOP</li>
+            </ul>
+          </div>
+          <div class="stack-row">
+            <h3 class="stack-row-title">Tools</h3>
+            <ul class="stack-chips">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Postman</li>
+              <li>Vercel</li>
+              <li>VS Code</li>
+            </ul>
+          </div>
+          <div class="stack-row">
+            <h3 class="stack-row-title">Methodologies</h3>
+            <ul class="stack-chips">
+              <li>Agile / Scrum</li>
+              <li>SDLC</li>
+              <li>Sprint Stand-ups</li>
+              <li>Task Estimation</li>
+            </ul>
+          </div>
+        </div>
+        <button class="stack-more" id="stackMore" type="button" aria-expanded="false">
+          Show all skills ↓
+        </button>
+      </section>
 
-          <div class="stack-col">
-            <h3 class="stack-col-title">Backend</h3>
-            <ul class="stack-list">
-              <li>
-                <span>Node.js</span><span class="tag tag-violet">Core</span>
-              </li>
-              <li><span>PHP (Laravel)</span></li>
-              <li>
-                <span>RESTful APIs</span
-                ><span class="tag tag-violet">Core</span>
-              </li>
-              <li><span>Java</span></li>
-              <li>
-                <span>Python</span><span class="tag tag-violet">Core</span>
-              </li>
-            </ul>
-          </div>
+      <!-- ===== PROJECTS — carousel ===== -->
+      <section class="section work" id="work">
+        <div class="section-head">
+          <span class="eyebrow">03 / Projects</span>
+          <h2>Things I've shipped</h2>
+          <p class="section-sub">
+            Client work and self‑directed builds, side by side.
+          </p>
+        </div>
 
-          <div class="stack-col">
-            <h3 class="stack-col-title">Database</h3>
-            <ul class="stack-list">
-              <li><span>MongoDB</span></li>
-              <li><span>PostgreSQL</span></li>
-              <li><span>MySQL</span></li>
-              <li><span>SQLite</span></li>
-            </ul>
-          </div>
+        <div class="work-carousel">
+        <div class="work-grid" id="workTrack" tabindex="0" aria-label="Projects, scroll horizontally">
+          <article class="wcard tilt" data-motif="pet">
+            <div class="wcard-glow"></div>
+            <a class="wcard-shot" href="https://insurance.tommyandfurry.com/tommyandfurry/#/PetHome" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <span class="wcard-shot-bar"><i></i><i></i><i></i><em>insurance.tommyandfurry.com</em></span>
+              <span class="wcard-shot-view" data-label="Preview coming soon"><img src="assets/projects/pet-insurance.jpg" alt="Pet Insurance home page" loading="lazy" onerror="this.remove()" /></span>
+            </a>
+            <div class="wcard-top">
+              <span class="tag tag-amber">Company Project</span>
+              <span class="wcard-id">01</span>
+            </div>
+            <h3>Pet Insurance Product</h3>
+            <p class="wcard-client">Novacred Insurance Pvt Ltd</p>
+            <p class="wcard-desc">
+              Calculators and underwriter integrations across three insurers,
+              quote to bind.
+            </p>
+            <div class="wcard-stack">
+              <span>PHP</span><span>Third‑party APIs</span><span>MySQL</span>
+            </div>
+            <a
+              href="https://insurance.tommyandfurry.com/tommyandfurry/#/PetHome"
+              class="wcard-cta wcard-cta-live"
+              data-demo="papertrade"
+              target="_blank"
+              >View project <span>↗</span></a
+            >
+            <!-- <button class="wcard-cta" disabled>Code private 🔒</button> -->
+          </article>
 
-          <div class="stack-col">
-            <h3 class="stack-col-title">Workflow</h3>
-            <ul class="stack-list">
-              <li><span>Git / GitHub</span></li>
-              <li><span>Vercel</span></li>
-              <li><span>Postman</span></li>
-              <li><span>Figma / Canva</span></li>
-              <li>
-                <span>UAT &amp; Functional Testing</span
-                ><span class="tag tag-amber">Daily driver</span>
-              </li>
-            </ul>
-          </div>
+          <article class="wcard tilt" data-motif="vehicle">
+            <div class="wcard-glow"></div>
+            <a class="wcard-shot" href="https://insurance.tommyandfurry.com/tommyandfurry/#/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <span class="wcard-shot-bar"><i></i><i></i><i></i><em>insurance.tommyandfurry.com</em></span>
+              <span class="wcard-shot-view" data-label="Preview coming soon"><img src="assets/projects/vehicle-insurance.jpg" alt="Vehicle Insurance home page" loading="lazy" onerror="this.remove()" /></span>
+            </a>
+            <div class="wcard-top">
+              <span class="tag tag-amber">Company Project</span>
+              <span class="wcard-id">02</span>
+            </div>
+            <h3>Vehicle Insurance — API Integration</h3>
+            <p class="wcard-client">Novacred Insurance Pvt Ltd</p>
+            <p class="wcard-desc">
+              Integrated third‑party vehicle insurance providers and ran full
+              UAT before go‑live.
+            </p>
+            <div class="wcard-stack">
+              <span>Laravel</span><span>REST APIs</span><span>UAT</span>
+            </div>
+            <a
+              href="https://insurance.tommyandfurry.com/tommyandfurry/#/"
+              class="wcard-cta wcard-cta-live"
+              data-demo="papertrade"
+              target="_blank"
+              >View project <span>↗</span></a
+            >
+            <!-- <button class="wcard-cta" disabled>Code private 🔒</button> -->
+          </article>
 
-          <div class="stack-col">
-            <h3 class="stack-col-title">AI‑assisted dev</h3>
-            <ul class="stack-list">
-              <li><span>Claude</span></li>
-              <li><span>GitHub Copilot</span></li>
-              <li><span>ChatGPT (Codex)</span></li>
-              <li><span>Kiro</span></li>
-            </ul>
-          </div>
+          <article class="wcard tilt" data-motif="ecommerce">
+            <div class="wcard-glow"></div>
+            <a class="wcard-shot" href="https://h-chen.vercel.app/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <span class="wcard-shot-bar"><i></i><i></i><i></i><em>h-chen.vercel.app</em></span>
+              <span class="wcard-shot-view" data-label="Preview coming soon"><img src="assets/projects/chloes-venture.jpg" alt="Chloe&#39;s Venture home page" loading="lazy" onerror="this.remove()" /></span>
+            </a>
+            <div class="wcard-top">
+              <span class="tag tag-amber">Company Project</span>
+              <span class="wcard-id">03</span>
+            </div>
+            <h3>Chloe's Venture</h3>
+            <p class="wcard-client">The R.D. Group of Industries</p>
+            <p class="wcard-desc">
+              E‑commerce shopping application built and shipped independently,
+              end to end.
+            </p>
+            <div class="wcard-stack">
+              <span>Next.js</span><span>TypeScript</span><span>Node.js</span>
+            </div>
+            <a
+              href="https://h-chen.vercel.app/"
+              target="_blank"
+              class="wcard-cta wcard-cta-live"
+              data-demo="papertrade"
+              >View project <span>↗</span></a
+            >
+            <!-- <button class="wcard-cta" disabled>Code private 🔒</button> -->
+          </article>
+
+          <article class="wcard tilt" data-motif="dashboard">
+            <div class="wcard-glow"></div>
+            <a class="wcard-shot" href="https://shreyamehtawork.github.io/firsturperfumes/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <span class="wcard-shot-bar"><i></i><i></i><i></i><em>shreyamehtawork.github.io</em></span>
+              <span class="wcard-shot-view" data-label="Preview coming soon"><img src="assets/projects/firstur-perfumes.jpg" alt="Firstur Perfumes home page" loading="lazy" onerror="this.remove()" /></span>
+            </a>
+            <div class="wcard-top">
+              <span class="tag tag-amber">Client work</span>
+              <span class="wcard-id">04</span>
+            </div>
+            <h3>Firstur Perfumes</h3>
+            <p class="wcard-client">The R.D. Group of Industries</p>
+            <p class="wcard-desc">
+              Desktop‑first admin dashboard for catalogue and order oversight.
+            </p>
+            <div class="wcard-stack">
+              <span>React</span><span>Redux</span><span>REST APIs</span>
+            </div>
+            <a
+              href="https://shreyamehtawork.github.io/firsturperfumes/"
+              class="wcard-cta wcard-cta-live"
+              target="_blank"
+              data-demo="papertrade"
+              >View project <span>↗</span></a
+            >
+            <!-- <button class="wcard-cta" disabled>Code private 🔒</button> -->
+          </article>
+
+          <article class="wcard tilt" data-motif="dashboard">
+            <div class="wcard-glow"></div>
+            <a class="wcard-shot" href="https://thenexoragroup.in/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <span class="wcard-shot-bar"><i></i><i></i><i></i><em>thenexoragroup.in</em></span>
+              <span class="wcard-shot-view" data-label="Preview coming soon"><img src="assets/projects/nexora.jpg" alt="Nexora home page" loading="lazy" onerror="this.remove()" /></span>
+            </a>
+            <div class="wcard-top">
+              <span class="tag tag-amber">Client work</span>
+              <span class="wcard-id">05</span>
+            </div>
+            <h3>Nexora</h3>
+            <p class="wcard-client">Nexora Tech Solutions</p>
+            <p class="wcard-desc">
+              Multi-role admin dashboard for catalogue and order oversight.
+            </p>
+            <div class="wcard-stack">
+              <span>React</span><span>Redux</span><span>REST APIs</span>
+            </div>
+            <a
+              href="https://thenexoragroup.in/"
+              class="wcard-cta wcard-cta-live"
+              target="_blank"
+              data-demo="papertrade"
+              >View project <span>↗</span></a
+            >
+            <!-- <button class="wcard-cta" disabled>Code private 🔒</button> -->
+          </article>
+
+          <article
+            class="wcard tilt is-live"
+            data-motif="orders"
+            data-demo="nkp-world"
+          >
+            <div class="wcard-glow"></div>
+            <a class="wcard-shot" href="https://nkpworld.com/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <span class="wcard-shot-bar"><i></i><i></i><i></i><em>nkpworld.com</em></span>
+              <span class="wcard-shot-view" data-label="Preview coming soon"><img src="assets/projects/nkp-world.jpg" alt="NKP World home page" loading="lazy" onerror="this.remove()" /></span>
+            </a>
+            <div class="wcard-top">
+              <span class="tag tag-amber">Client work</span>
+              <span class="wcard-id">06</span>
+            </div>
+            <h3>NKP World</h3>
+            <p class="wcard-client">Nexora Tech Solutions</p>
+            <p class="wcard-desc">
+              Built to streamline product tracking and updates.
+            </p>
+            <div class="wcard-stack">
+              <span>React</span><span>Express</span><span>MongoDB</span
+              ><span>Node.js</span>
+            </div>
+            <a
+              href="https://nkpworld.com/"
+              class="wcard-cta wcard-cta-live"
+              data-demo="cakeify"
+              >View project <span>↗</span></a
+            >
+          </article>
+
+          <article class="wcard tilt" data-motif="ecommerce">
+            <div class="wcard-glow"></div>
+            <a class="wcard-shot" href="https://www.zenvayu.co/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+              <span class="wcard-shot-bar"><i></i><i></i><i></i><em>zenvayu.co</em></span>
+              <span class="wcard-shot-view" data-label="Preview coming soon"><img src="assets/projects/zenvayu.jpg" alt="ZenVayu home page" loading="lazy" onerror="this.remove()" /></span>
+            </a>
+            <div class="wcard-top">
+              <span class="tag tag-amber">Client work</span>
+              <span class="wcard-id">07</span>
+            </div>
+            <h3>ZenVayu</h3>
+            <p class="wcard-client">Nexora Tech Solutions</p>
+            <p class="wcard-desc">
+              E‑commerce store for smart aroma diffusers and blended
+              fragrance oils.
+            </p>
+            <div class="wcard-stack">
+              <span>Wix</span><span>E‑commerce</span><span>SEO</span>
+            </div>
+            <a
+              href="https://www.zenvayu.co/"
+              class="wcard-cta wcard-cta-live"
+              target="_blank"
+              >View project <span>↗</span></a
+            >
+          </article>
+        </div>
+
+        <div class="work-nav">
+          <div class="work-progress"><span id="workProgress"></span></div>
+          <span class="work-count" id="workCount">01 / 07</span>
+          <button class="work-btn" id="workPrev" type="button" aria-label="Previous project">←</button>
+          <button class="work-btn" id="workNext" type="button" aria-label="Next project">→</button>
+        </div>
         </div>
       </section>
 
       <!-- ===== WORK LOG ===== -->
       <section class="section log" id="log">
         <div class="section-head">
-          <span class="eyebrow">03 / Work Experience</span>
+          <span class="eyebrow">04 / Work Experience</span>
           <h2>Where I've worked</h2>
         </div>
 
         <div class="timeline">
-          <article class="tl-entry is-active reveal">
+          <article class="tl-entry is-active is-open reveal">
             <div class="tl-rail"><span class="tl-node"></span></div>
             <div class="tl-card">
               <div class="tl-top">
@@ -438,6 +726,7 @@
                 <li>Client Based Project</li>
                 <!-- <li>Client Based Project</li> -->
               </ul>
+              <button class="tl-toggle" type="button">Show details</button>
             </div>
           </article>
 
@@ -470,6 +759,7 @@
                   across Hizuno, GoDigit, and Bajaj.
                 </li>
               </ul>
+              <button class="tl-toggle" type="button">Show details</button>
             </div>
           </article>
 
@@ -496,195 +786,8 @@
                   design, build, and test.
                 </li>
               </ul>
+              <button class="tl-toggle" type="button">Show details</button>
             </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- ===== PROJECTS — bento grid ===== -->
-      <section class="section work" id="work">
-        <div class="section-head">
-          <span class="eyebrow">04 / Projects</span>
-          <h2>Things I've shipped</h2>
-          <p class="section-sub">
-            Client work and self‑directed builds, side by side.
-          </p>
-        </div>
-
-        <div class="work-grid">
-          <article class="wcard wcard-lg tilt" data-motif="pet">
-            <div class="wcard-glow"></div>
-            <div class="wcard-top">
-              <span class="tag tag-amber">Client work</span>
-              <span class="wcard-id">01</span>
-            </div>
-            <h3>Pet Insurance Product</h3>
-            <p class="wcard-client">Novacred Insurance Pvt Ltd</p>
-            <p class="wcard-desc">
-              Calculators and underwriter integrations built across three
-              insurance partners, from quote to bind.
-            </p>
-            <div class="wcard-stack">
-              <span>PHP</span><span>Third‑party APIs</span><span>MySQL</span>
-            </div>
-            <a
-              href="https://insurance.tommyandfurry.com/tommyandfurry/#/PetHome"
-              class="wcard-cta wcard-cta-live"
-              data-demo="papertrade"
-              target="_blank"
-              >View project <span>↗</span></a
-            >
-            <!-- <button class="wcard-cta" disabled>Code private 🔒</button> -->
-          </article>
-
-          <article class="wcard tilt" data-motif="vehicle">
-            <div class="wcard-glow"></div>
-            <div class="wcard-top">
-              <span class="tag tag-amber">Client work</span>
-              <span class="wcard-id">02</span>
-            </div>
-            <h3>Vehicle Insurance — API Integration</h3>
-            <p class="wcard-client">Novacred Insurance Pvt Ltd</p>
-            <p class="wcard-desc">
-              Integrated third‑party vehicle insurance providers and ran full
-              UAT before go‑live.
-            </p>
-            <div class="wcard-stack">
-              <span>Laravel</span><span>REST APIs</span><span>UAT</span>
-            </div>
-            <a
-              href="https://insurance.tommyandfurry.com/tommyandfurry/#/"
-              class="wcard-cta wcard-cta-live"
-              data-demo="papertrade"
-              target="_blank"
-              >View project <span>↗</span></a
-            >
-            <!-- <button class="wcard-cta" disabled>Code private 🔒</button> -->
-          </article>
-
-          <article class="wcard tilt" data-motif="ecommerce">
-            <div class="wcard-glow"></div>
-            <div class="wcard-top">
-              <span class="tag tag-amber">Client work</span>
-              <span class="wcard-id">03</span>
-            </div>
-            <h3>Chloe's Venture</h3>
-            <p class="wcard-client">The R.D. Group of Industries</p>
-            <p class="wcard-desc">
-              E‑commerce shopping application built and shipped independently,
-              end to end.
-            </p>
-            <div class="wcard-stack">
-              <span>Next.js</span><span>TypeScript</span><span>Node.js</span>
-            </div>
-            <a
-              href="https://h-chen.vercel.app/"
-              target="_blank"
-              class="wcard-cta wcard-cta-live"
-              data-demo="papertrade"
-              >View project <span>↗</span></a
-            >
-            <!-- <button class="wcard-cta" disabled>Code private 🔒</button> -->
-          </article>
-
-          <article class="wcard tilt" data-motif="dashboard">
-            <div class="wcard-glow"></div>
-            <div class="wcard-top">
-              <span class="tag tag-amber">Client work</span>
-              <span class="wcard-id">04</span>
-            </div>
-            <h3>Firstur Perfumes</h3>
-            <p class="wcard-client">The R.D. Group of Industries</p>
-            <p class="wcard-desc">
-              Desktop‑first admin dashboard for catalogue and order oversight.
-            </p>
-            <div class="wcard-stack">
-              <span>React</span><span>Redux</span><span>REST APIs</span>
-            </div>
-            <a
-              href="https://shreyamehtawork.github.io/firsturperfumes/"
-              class="wcard-cta wcard-cta-live"
-              target="_blank"
-              data-demo="papertrade"
-              >View project <span>↗</span></a
-            >
-            <!-- <button class="wcard-cta" disabled>Code private 🔒</button> -->
-          </article>
-
-          <article class="wcard tilt" data-motif="dashboard">
-            <div class="wcard-glow"></div>
-            <div class="wcard-top">
-              <span class="tag tag-amber">Client work</span>
-              <span class="wcard-id">05</span>
-            </div>
-            <h3>Nexora</h3>
-            <p class="wcard-client">Nexora Tech Solutions</p>
-            <p class="wcard-desc">
-              Multi-role admin dashboard for catalogue and order oversight.
-            </p>
-            <div class="wcard-stack">
-              <span>React</span><span>Redux</span><span>REST APIs</span>
-            </div>
-            <a
-              href="https://thenexoragroup.in/"
-              class="wcard-cta wcard-cta-live"
-              target="_blank"
-              data-demo="papertrade"
-              >View project <span>↗</span></a
-            >
-            <!-- <button class="wcard-cta" disabled>Code private 🔒</button> -->
-          </article>
-
-          <article
-            class="wcard tilt is-live"
-            data-motif="orders"
-            data-demo="nkp-world"
-          >
-            <div class="wcard-glow"></div>
-            <div class="wcard-top">
-              <span class="tag tag-amber">Client work</span>
-              <span class="wcard-id">06</span>
-            </div>
-            <h3>NKP World</h3>
-            <p class="wcard-client">Nexora Tech Solutions</p>
-            <p class="wcard-desc">
-              Built to streamline product tracking and updates.
-            </p>
-            <div class="wcard-stack">
-              <span>React</span><span>Express</span><span>MongoDB</span
-              ><span>Node.js</span>
-            </div>
-            <a
-              href="https://nkpworld.com/"
-              class="wcard-cta wcard-cta-live"
-              data-demo="cakeify"
-              >View project <span>↗</span></a
-            >
-          </article>
-
-          <article
-            class="wcard wcard-lg tilt is-live"
-            data-motif="trading"
-            data-demo="papertrade"
-          >
-            <div class="wcard-glow"></div>
-            <div class="wcard-top">
-              <span class="tag tag-violet">Self‑directed</span>
-              <span class="wcard-id">07</span>
-            </div>
-            <h3>PaperTrade</h3>
-            <p class="wcard-client">Independent build</p>
-            <p class="wcard-desc">
-              Virtual trading system simulating order books, P&amp;L, and live
-              position tracking.
-            </p>
-            <div class="wcard-stack">
-              <span>Python</span><span>FASTapis</span><span>MongoDB</span>
-            </div>
-            <button class="wcard-cta" disabled>Code private 🔒</button>
-            <!-- <a href="#" class="wcard-cta wcard-cta-live" data-demo="papertrade"
-              >View project <span>↗</span></a
-            > -->
           </article>
         </div>
       </section>
@@ -741,6 +844,12 @@
                 target="_blank"
                 rel="noopener"
                 ><span>LinkedIn</span><b>in/shreyamehta150506</b></a
+              >
+              <a
+                href="https://github.com/shreyamehtawork"
+                target="_blank"
+                rel="noopener"
+                ><span>GitHub</span><b>github.com/shreyamehtawork</b></a
               >
               <span class="contact-link-static"
                 ><span>Location</span><b>Pune, Maharashtra, India</b></span
@@ -808,6 +917,12 @@
           target="_blank"
           rel="noopener"
           >LinkedIn</a
+        >
+        <a
+          href="https://github.com/shreyamehtawork"
+          target="_blank"
+          rel="noopener"
+          >GitHub</a
         >
       </div>
     </footer>

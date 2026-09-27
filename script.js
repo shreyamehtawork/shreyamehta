@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ---------- nav scroll state + active link ---------- */
   const nav = document.getElementById("nav");
-  const sections = ["about", "stack", "log", "work", "certs", "contact"]
+  const sections = ["about", "stack", "work", "log", "certs", "contact"]
     .map((id) => document.getElementById(id))
     .filter(Boolean);
   const navLinks = document.querySelectorAll(".nav-pill a, .nav-drawer a");
@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "top",
     "about",
     "stack",
-    "log",
     "work",
+    "log",
     "certs",
     "contact",
   ]
@@ -309,6 +309,90 @@ document.addEventListener("DOMContentLoaded", () => {
         card.style.transform = "perspective(800px) rotateX(0) rotateY(0)";
       });
     });
+  }
+
+  /* ---------- about: read more (phones only; button is hidden on desktop) ---------- */
+  const leadMore = document.getElementById("leadMore");
+  if (leadMore) {
+    leadMore.addEventListener("click", () => {
+      const open = leadMore.parentElement.classList.toggle("is-open");
+      leadMore.setAttribute("aria-expanded", String(open));
+      leadMore.textContent = open ? "Show less ↑" : "Read more ↓";
+    });
+  }
+
+  /* ---------- work experience: expand/collapse (phones only; buttons hidden on desktop) ---------- */
+  document.querySelectorAll(".tl-toggle").forEach((btn) => {
+    const entry = btn.closest(".tl-entry");
+    const sync = () => {
+      const open = entry.classList.contains("is-open");
+      btn.textContent = open ? "Hide details" : "Show details";
+      btn.setAttribute("aria-expanded", String(open));
+    };
+    btn.addEventListener("click", () => {
+      entry.classList.toggle("is-open");
+      sync();
+    });
+    sync();
+  });
+
+  /* ---------- stack: show all skills (phones only; button hidden on desktop) ---------- */
+  const stackMore = document.getElementById("stackMore");
+  if (stackMore) {
+    stackMore.addEventListener("click", () => {
+      const open = stackMore.previousElementSibling.classList.toggle("is-open");
+      stackMore.setAttribute("aria-expanded", String(open));
+      stackMore.textContent = open ? "Show fewer ↑" : "Show all skills ↓";
+    });
+  }
+
+  /* ---------- project carousel ---------- */
+  const workTrack = document.getElementById("workTrack");
+  if (workTrack) {
+    const slides = Array.from(workTrack.children);
+    const prevBtn = document.getElementById("workPrev");
+    const nextBtn = document.getElementById("workNext");
+    const countEl = document.getElementById("workCount");
+    const progressEl = document.getElementById("workProgress");
+    const pad = (n) => String(n).padStart(2, "0");
+    // slide's left edge in the track's scroll coordinates
+    const slideLeft = (s) =>
+      s.getBoundingClientRect().left -
+      workTrack.getBoundingClientRect().left +
+      workTrack.scrollLeft;
+
+    const currentIndex = () => {
+      let best = 0;
+      slides.forEach((s, i) => {
+        if (
+          Math.abs(slideLeft(s) - workTrack.scrollLeft) <
+          Math.abs(slideLeft(slides[best]) - workTrack.scrollLeft)
+        )
+          best = i;
+      });
+      return best;
+    };
+
+    const update = () => {
+      const max = workTrack.scrollWidth - workTrack.clientWidth;
+      const atEnd = workTrack.scrollLeft >= max - 2;
+      const idx = atEnd ? slides.length - 1 : currentIndex();
+      countEl.textContent = `${pad(idx + 1)} / ${pad(slides.length)}`;
+      progressEl.style.width = `${((workTrack.scrollLeft + workTrack.clientWidth) / workTrack.scrollWidth) * 100}%`;
+      prevBtn.disabled = workTrack.scrollLeft <= 2;
+      nextBtn.disabled = atEnd;
+    };
+
+    const go = (dir) => {
+      const target = slides[Math.min(slides.length - 1, Math.max(0, currentIndex() + dir))];
+      workTrack.scrollTo({ left: slideLeft(target) });
+    };
+
+    prevBtn.addEventListener("click", () => go(-1));
+    nextBtn.addEventListener("click", () => go(1));
+    workTrack.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
   }
 
   /* ---------- project demo links (placeholder — no external repos wired yet) ---------- */
