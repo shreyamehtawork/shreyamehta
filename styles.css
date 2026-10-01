@@ -978,6 +978,24 @@ main,
   font-weight: 400;
   line-height: 1.6;
 }
+.bento-lead p.lead-points-label {
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.lead-points {
+  margin: 0 0 16px;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 15.5px;
+  line-height: 1.7;
+}
+.lead-points li {
+  margin-bottom: 8px;
+}
+.lead-points strong {
+  color: var(--ink);
+  font-weight: 500;
+}
 .bento-quote {
   grid-column: span 1;
   grid-row: span 2;
@@ -1016,7 +1034,7 @@ main,
   font-size: 14.5px;
 }
 .bento-progress {
-  grid-column: span 4;
+  grid-column: span 3;
 }
 .bento-progress ul {
   display: flex;
@@ -1032,6 +1050,23 @@ main,
 .bento-progress li span {
   font-size: 13.5px;
   color: var(--muted);
+}
+.bento-beyond {
+  grid-column: 1 / -1;
+}
+.bento-beyond ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+.bento-beyond li {
+  font-size: 13.5px;
+  color: var(--muted);
+  padding: 7px 14px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  background: var(--glass);
 }
 .bar {
   display: block;
@@ -1062,7 +1097,7 @@ main,
     grid-row: span 1;
   }
   .bento-progress {
-    grid-column: span 2;
+    grid-column: span 1;
   }
 }
 @media (max-width: 560px) {
@@ -2035,9 +2070,8 @@ main,
   .bento-quote {
     grid-column: span 3;
   }
-  .bento-fact,
-  .bento-fact + .bento-fact + .bento-fact {
-    grid-column: span 1;
+  .bento-fact {
+    grid-column: span 3;
     justify-content: flex-start;
     gap: 5px;
     padding: 12px 10px;
@@ -2067,8 +2101,13 @@ main,
     line-height: 1.6;
     margin-bottom: 8px;
   }
-  .bento-lead:not(.is-open) p:not(:first-child) {
+  .bento-lead:not(.is-open) p:not(:first-child),
+  .bento-lead:not(.is-open) .lead-points {
     display: none;
+  }
+  .lead-points {
+    font-size: 14px;
+    line-height: 1.6;
   }
   .bento-quote {
     padding: 12px 16px;
